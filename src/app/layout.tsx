@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import { MainLayout } from '@/components/layouts/main-layout';
 import '@/styles/style.scss';
 import SessionProvider from '@/components/providers/session-provider';
 
@@ -25,7 +24,7 @@ export default function RootLayout({
     <html lang="kr">
       <body>
         <SessionProvider>
-          <MainLayout>{children}</MainLayout>
+          <main>{children}</main>
         </SessionProvider>
       </body>
     </html>

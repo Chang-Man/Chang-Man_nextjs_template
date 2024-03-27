@@ -7,11 +7,9 @@ declare global {
     data: T;
   }
 
-  interface INovel {
+  interface IPost {
     id: number;
     title: string;
-    episodeIndex: number;
-    storyIndex: number;
     createdAt: string;
     updatedAt: string;
   }

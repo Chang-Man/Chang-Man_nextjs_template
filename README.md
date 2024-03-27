@@ -3,7 +3,8 @@
 ```agsl
 yarn 1.22.19
 typescript
-react-query
+@tanstack/react-query v5
+next-auth v5:beta
 sass
 yarn add next-auth
 ```

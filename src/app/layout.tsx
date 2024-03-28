@@ -3,6 +3,7 @@ import '@/styles/style.scss';
 import SessionProvider from '@/components/providers/sessionProvider';
 import { auth } from './api/auth/[...nextauth]/auth';
 import TanstackProvider from '@/components/providers/tanstackProvider';
+import SessionLoader from '@/components/providers/sessionLoader';
 
 // export const metadata: Metadata = {
 //   title: "title",
@@ -27,9 +28,11 @@ export default async function RootLayout({
     <html lang="kr">
       <body>
         <SessionProvider session={session}>
-          <TanstackProvider>
-            <main>{children}</main>
-          </TanstackProvider>
+          <SessionLoader>
+            <TanstackProvider>
+              <main>{children}</main>
+            </TanstackProvider>
+          </SessionLoader>
         </SessionProvider>
       </body>
     </html>
